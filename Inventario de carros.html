@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>usedcars - Car Inventory</title>
+   <link rel="stylesheet" href="css/Inventario de carros.css">
+   <link rel="shortcut icon" href="imagenes/Favicon.jpeg" type="image/x-icon">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+        <a href="Index.html">
+        <img class="imagen" src="imagenes/logo de carro sin fondo.png" alt="logo" title="crepúsculo logo">
+        </a>
+        <h1>Usedcars</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="Index.html"><b>Home</b></a></li>
+            <li><a href="Index.html"><b>Contact Us</b></a></li>
+            <li><a href="Inventario de carros.html"><b>Inventory</b></a></li>
+        </ul>
+    </nav>
+</header>
+<div class="title-select-container">
+    <h1>Car Inventory</h1>
+    <select id="location-select" onchange="filterByLocation()">
+        <option value="all">All</option>
+        <option value="Spring-Texas">Spring-Texas 77388</option>
+        <option value="Houston-Texas">Houston-Texas 77034</option>
+        <option value="Arlington-Texas">Arlington-Texas 76011</option>
+        <option value="Garland-Texas">Garland-Texas 75042</option>
+    </select>
+</div>
+<hr>
+    <!-- Sedan Section -->
+    <h2>Sedan</h2>
+    <div class="caja_img">
+        <div class="car" data-location="Arlington-Texas">
+            <div class="car-images">
+                <img src="imagenes/2024 Kia K5 (4).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+                <img src="imagenes/2024 Kia K5 (2).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+                <img src="imagenes/2024 Kia K5 (3).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+                <img src="imagenes/2024 Kia K5 (1).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+                <img src="imagenes/2024 Kia K5 (5).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+            </div>
+            
+            <div class="car-info">
+                <div class="car-controls">
+                    <button class="arrow" onclick="prevImage(this)">&#9664;</button>
+                    <button class="arrow" onclick="nextImage(this)">&#9654;</button>
+                </div>
+                <h3>2024 Kia K5</h3>
+                <button onclick="openForm('2024 Kia K5')">Request Information</button>
+            </div>
+        </div>
+        <div class="car" data-location="Arlington-Texas">
+            <div class="car-images">
+                <img src="imagenes/2018 Nissan Maxima SV (2).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+                <img src="imagenes/2018 Nissan Maxima SV (1).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+                <img src="imagenes/2018 Nissan Maxima SV (3).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+                <img src="imagenes/2018 Nissan Maxima SV (4).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+                <img src="imagenes/2018 Nissan Maxima SV (5).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+            </div>
+            
+            <div class="car-info">
+                <div class="car-controls">
+                    <button class="arrow" onclick="prevImage(this)">&#9664;</button>
+                    <button class="arrow" onclick="nextImage(this)">&#9654;</button>
+                </div>
+                <h3>2018 Nissan Maxima SV</h3>
+                <button onclick="openForm('2018 Nissan Maxima SV')">Request Information</button>
+            </div>
+        </div>
+        <div class="car" data-location="Arlington-Texas">
+            <div class="car-images">
+                <img src="imagenes/2022 Toyota Camry SE (2).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+                <img src="imagenes/2022 Toyota Camry SE (5).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+                <img src="imagenes/2022 Toyota Camry SE (3).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+                <img src="imagenes/2022 Toyota Camry SE (4).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+                <img src="imagenes/2022 Toyota Camry SE (1).jpeg" title="Sedan 1" height="300" width="300" alt="Sedan 1">
+            </div>
+            
+            <div class="car-info">
+                <div class="car-controls">
+                    <button class="arrow" onclick="prevImage(this)">&#9664;</button>
+                    <button class="arrow" onclick="nextImage(this)">&#9654;</button>
+                </div>
+                <h3>2022 Toyota Camry SE</h3>
+                <button onclick="openForm('2022 Toyota Camry SE')">Request Information</button>
+            </div>
+        </div>
+        <!-- More sedans here -->
+    </div>
+
+    <hr>
+
+    <!-- SUV Section -->
+    <h2>SUV</h2>
+    <div class="caja_img">
+        <div class="car" data-location="Garland-Texas">
+            <img src="https://www.lanacion.com.ar/resizer/v2/el-chevrolet-tracker-nacional-encabezo-las-ventas-YN3I6ZIZCRGX7MKR7GIBD5PRV4.jpg?auth=0bf6827e0dee1406f1f7e53a4ad9725f5f3f027d6e0c108834e454d57dde4143&width=420&height=280&quality=70&smart=true" title="SUV 1" height="300" width="300" alt="SUV 1">
+            <button onclick="openForm('SUV 1')">Request Information</button>
+        </div>
+        <div class="car">
+            <img src="https://www.lanacion.com.ar/resizer/v2/el-chevrolet-tracker-nacional-encabezo-las-ventas-YN3I6ZIZCRGX7MKR7GIBD5PRV4.jpg?auth=0bf6827e0dee1406f1f7e53a4ad9725f5f3f027d6e0c108834e454d57dde4143&width=420&height=280&quality=70&smart=true" title="SUV 2" height="300" width="300" alt="SUV 2">
+            <button onclick="openForm('SUV 2')">Request Information</button>
+        </div>
+        <!-- More SUVs here -->
+    </div>
+
+    <hr>
+
+    <!-- Trucks Section -->
+    <h2>Trucks</h2>
+    <div class="caja_img">
+        <div class="car" data-location="Arlington-Texas">
+            <img src="imagenes/truck1.jpeg" title="Truck 1" height="300" width="300" alt="Truck 1">
+            <button onclick="openForm('Truck 1')">Request Information</button>
+        </div>
+        <div class="car">
+            <img src="imagenes/truck2.jpeg" title="Truck 2" height="300" width="300" alt="Truck 2">
+            <button onclick="openForm('Truck 2')">Request Information</button>
+        </div>
+        <div class="car">
+            <img src="imagenes/truck3.jpeg" title="Truck 3" height="300" width="300" alt="Truck 2">
+            <h3>2021 Chevrolet Tahoe LT</h3>
+            <button onclick="openForm('Truck 2')">Request Information</button>
+        </div>
+        <!-- More trucks here -->
+    </div>
+
+    <hr>
+
+    <!-- Luxury Section -->
+    <h2>Luxury</h2>
+    <div class="caja_img">
+        <div class="car" data-location="Houston-Texas">
+            <img src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/ah0ud2p9qfsvf2sqer0p" title="Luxury 1" height="300" width="300" alt="Luxury 1">
+            <button onclick="openForm('Luxury 1')">Request Information</button>
+        </div>
+        <div class="car">
+            <img src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/ah0ud2p9qfsvf2sqer0p" title="Luxury 2" height="300" width="300" alt="Luxury 2">
+            <button onclick="openForm('Luxury 2')">Request Information</button>
+        </div>
+        <!-- More luxury cars here -->
+    </div>
+
+    <div id="contactForm" class="form-popup" >
+        <form class="form-container" action="https://formspree.io/f/myzgbjdv" method="POST" onsubmit="return validarenvio()">
+            <h2>Request Information</h2>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Your name" required>
+            <span id="sname" class="errorform"></span>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" placeholder="Your phone number" required>
+            <span id="sphone" class="errorform"></span>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Your email" required>
+            <span id="semail" class="errorform"></span>
+
+            <label for="car">Car of Interest</label>
+            <input type="text" name="car" id="car" readonly>
+
+            <input type="submit" class="btn" value="Send">
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <div class="centrar_texto">
+        <h2><a href="Index.html">Back to Home</a></h2>
+    </div>
+
+    <script src="js/Inventario de carros.js"></script>
+</body>
+</html>

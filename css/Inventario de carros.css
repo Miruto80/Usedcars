@@ -1,0 +1,287 @@
+body {
+    background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000; /* Color del header */
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container img {
+    height:200px; /* Tamaño del logo */
+    margin-right: 10px;
+}
+
+header nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo-container {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra la imagen y el título horizontalmente */
+    }
+
+    header .logo-container img {
+        margin-right: 0; /* Elimina el margen derecho */
+        padding: 0;
+    }
+
+    header h1 {
+        text-align: center; /* Centra el texto del título */
+    }
+
+    
+    header nav {
+        width: 100%;
+        text-align: left;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    header nav ul li a {
+        width: 100%;
+        padding: 10px 0;
+        display: block;
+        text-align: center;
+        background-color: #000; /* Fondo del enlace */
+        color: white; /* Color del texto */
+    }
+}
+  .caja_img {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px auto;
+      max-width: 1200px;
+  }
+
+  .car {
+      margin: 20px;
+      text-align: center;
+      background-color: white;
+      color: #000;
+  }
+
+  .car img {
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-in-out;
+  }
+
+  .car img:hover {
+      transform: scale(1.1);
+  }
+
+  .car button {
+    background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-top: 10px; /* Añade un margen superior para separarlo de la imagen */
+      display: block; /* Esto asegura que el botón tome todo el ancho disponible */
+      width: calc(100% - 40px); /* Ajusta el ancho del botón */
+      max-width: 300px; /* Limita el ancho máximo del botón */
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5px;
+  }
+
+  .car button:hover {
+    background-color: #333;
+      transform: translateY(-3px);
+  }
+  .car h3 {
+   margin: 0;
+  }
+
+  .car-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.car-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.car-controls .arrow {
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    font-size: 24px; /* Tamaño de la flecha */
+    cursor: pointer;
+    margin: 0 5px; /* Espaciado entre flechas */
+    color: #8055CA; /* Color de las flechas */
+}
+
+.car-controls .arrow:hover {
+    color: #000; /* Color al pasar el mouse */
+    transform: scale(1.2); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+
+  .hidden {
+    display: none;
+}
+
+  .form-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid #000;
+      z-index: 9;
+      background-color: #fff;
+      padding: 20px;
+      color: #000;
+  }
+
+  .form-container {
+      max-width: 300px;
+      text-align: center;
+  }
+
+  .form-container h2 {
+      margin-bottom: 20px;
+      color: #000;
+  }
+
+  .form-container input[type="text"],
+  .form-container input[type="tel"],
+  .form-container input[type="email"] {
+      width: 95%;
+      padding: 10px;
+      margin: 5px 0 10px 0;
+      border: 1px solid #ccc;
+  }
+
+  .form-container .btn {
+      background-color: #8055CA;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      opacity: 0.9;
+      
+  }
+
+  .form-container .btn:hover {
+      background-color: #000;
+  }
+
+  .form-container .cancel {
+      background-color: #f44336;
+  }
+
+  h1, h2 {
+      text-align: center;
+      color: #fff;
+      margin-top: 20px;
+  }
+
+  .centrar_texto {
+      text-align: center;
+      margin: 20px 0;
+  }
+
+  a {
+      text-decoration: none;
+      color: white;
+  }
+
+  hr {
+      color: #000;
+      margin: 30px 0;
+  }
+
+  .title-select-container {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna para que el h1 esté encima del select */
+    align-items: center;
+    margin: 20px 0;
+}
+
+.title-select-container h1 {
+    margin: 0 0 10px 0; /* Ajusta el margen inferior para dar espacio entre el h1 y el select */
+    font-size: 50px;
+}
+
+#location-select {
+    padding: 5px 10px; /* Ajusta el tamaño del padding para hacerlo más pequeño */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f4f4f4; /* Color de fondo */
+    color: #333; /* Color del texto */
+    font-size: 14px; /* Tamaño de la fuente reducido */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+#location-select:hover {
+    background-color: #e0e0e0; /* Cambia el color de fondo al pasar el mouse */
+    border-color: #333; /* Cambia el color del borde al pasar el mouse */
+}
+
+.errorform {
+    color: red;
+    font-size: 0.9em;
+}
