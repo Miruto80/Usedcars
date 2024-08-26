@@ -100,7 +100,7 @@ header nav ul li a {
 
 /* Sección Hero */
 .hero {
-    background: linear-gradient(to bottom, #3c1053, #ad5389); /* Gradiente de fondo */
+    background: linear-gradient(to bottom, #4a0f5c, #8055ca, #ae76c8); /* Gradiente de fondo */
     color: #fff;
     text-align: center;
     padding: 100px 20px;
@@ -127,9 +127,10 @@ header nav ul li a {
 
 /* Sección de Información */
 .info-section {
-    background: url(../imagenes/carroatardecer.webp);
+    background: url(../imagenes/Arrecho.avif);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     color: #333;
     padding: 60px 20px;
     text-align: center;
@@ -159,7 +160,7 @@ header nav ul li a {
 }
 
 .info-section .feature {
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
     padding: 20px;
     margin: 10px;
     width: 250px;
