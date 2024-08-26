@@ -53,12 +53,31 @@
     <!-- Footer -->
     <footer>
         <h4>Social Media</h4>
-        <div class="redes-sociales"></div>
-            <a target="_blank" href="https://www.instagram.com/usedcarsforsaletx?igsh=MWZ6c3IyOW5zODBkdA%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
-            <a target="_blank" href="https://www.facebook.com/ventadecarroarlingtontexas?mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a>
-            
+        <div class="redes-sociales">
+            <a target="_blank" href="https://www.instagram.com/usedcarsforsaletx?igsh=MWZ6c3IyOW5zODBkdA%3D%3D&utm_source=qr">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/ventadecarroarlingtontexas?mibextid=LQQJ4d">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
         </div>
-        <cite>© Usedcars 2024</cite>
+        
+        <div class="legal">
+            <button id="legal-button">
+                Legal <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div id="legal-content" class="hidden">
+                <p>&copy; Usedcars 2024</p>
+                <p>All rights reserved. The images of the cars are used with permission.</p>
+            </div>
+        </div>
     </footer>
+       <script>
+    document.getElementById('legal-button').addEventListener('click', function () {
+        const legalContent = document.getElementById('legal-content');
+        legalContent.classList.toggle('show');
+    });
+
+       </script>
 </body>
 </html>
