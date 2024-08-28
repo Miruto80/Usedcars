@@ -17,6 +17,9 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
     align-items: center;
     padding: 10px 20px;
     background-color: #000; /* Color del header */
+    position: sticky;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   
 }
 
 header .logo-container {
@@ -51,6 +54,7 @@ header nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
+
 
 @media (max-width: 768px) {
     header {
@@ -119,7 +123,7 @@ header nav ul li a {
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease-in-out;
-      width: 400px;
+      width: 300px;
       height: 300px;
   }
 
@@ -269,6 +273,29 @@ header nav ul li a {
 .title-select-container h1 {
     margin: 0 0 10px 0; /* Ajusta el margen inferior para dar espacio entre el h1 y el select */
     font-size: 50px;
+}
+
+.title-select-container ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.title-select-container ul li {
+    margin: 0 10px;
+}
+
+.title-select-container ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.title-select-container ul li a:hover {
+    border-bottom: solid 3px white;
 }
 
 #location-select {

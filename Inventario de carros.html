@@ -32,10 +32,16 @@
         <option value="Arlington-Texas">Arlington-Texas 76011</option>
         <option value="Garland-Texas">Garland-Texas 75042</option>
     </select>
+    <ul>
+        <li><a href="#Sedan">Sedan</a></li>
+        <li><a href="#SUV">SUV</a></li>
+        <li><a href="#Trucks">Trucks</a></li>
+        <li><a href="#Luxury">Luxury</a></li>
+    </ul>
 </div>
 <hr>
     <!-- Sedan Section -->
-    <h2>Sedan</h2>
+    <h2 id="Sedan">Sedan</h2>
     <div class="caja_img">
         <div class="car" data-location="Arlington-Texas">
             <div class="car-images">
@@ -189,7 +195,7 @@
     <hr>
 
     <!-- SUV Section -->
-    <h2>SUV</h2>
+    <h2 id="SUV">SUV</h2>
     <div class="caja_img">
         <div class="car" data-location="Arlington-Texas">
             <div class="car-images">
@@ -315,20 +321,25 @@
     <hr>
 
     <!-- Trucks Section -->
-    <h2>Trucks</h2>
+    <h2 id="Trucks">Trucks</h2>
     <div class="caja_img">
         <div class="car" data-location="Arlington-Texas">
-            <img src="imagenes/truck1.jpeg" title="Truck 1" alt="Truck 1">
-            <button onclick="openForm('Truck 1')">Request Information</button>
-        </div>
-        <div class="car">
-            <img src="imagenes/truck2.jpeg" title="Truck 2" alt="Truck 2">
-            <button onclick="openForm('Truck 2')">Request Information</button>
-        </div>
-        <div class="car">
-            <img src="imagenes/truck3.jpeg" title="Truck 3" alt="Truck 2">
-            <h3>2021 Chevrolet Tahoe LT</h3>
-            <button onclick="openForm('Truck 2')">Request Information</button>
+            <div class="car-images">
+                <img src="imagenes/2018 GMC SIERRA 1500 SLT 2WD (1).jpeg" title="Truck 1" alt="Truck 1">
+                <img src="imagenes/2018 GMC SIERRA 1500 SLT 2WD (5).jpeg" title="Truck 1" alt="Truck 1">
+                <img src="imagenes/2018 GMC SIERRA 1500 SLT 2WD (3).jpeg" title="Truck 1" alt="Truck 1">
+                <img src="imagenes/2018 GMC SIERRA 1500 SLT 2WD (4).jpeg" title="Truck 1" alt="Truck 1">
+                <img src="imagenes/2018 GMC SIERRA 1500 SLT 2WD (2).jpeg" title="Truck 1" alt="Truck 1">
+            </div>
+            
+            <div class="car-info">
+                <div class="car-controls">
+                    <button class="arrow" onclick="prevImage(this)">&#9664;</button>
+                    <button class="arrow" onclick="nextImage(this)">&#9654;</button>
+                </div>
+                <h3>2018 GMC SIERRA 1500 SLT 2WD</h3>
+                <button onclick="openForm('2018 GMC SIERRA 1500 SLT 2WD')">Request Information</button>
+            </div>
         </div>
         <!-- More trucks here -->
     </div>
@@ -336,7 +347,7 @@
     <hr>
 
     <!-- Luxury Section -->
-    <h2>Luxury</h2>
+    <h2 id="Luxury">Luxury</h2>
     <div class="caja_img">
         <div class="car" data-location="Houston-Texas">
             <img src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/ah0ud2p9qfsvf2sqer0p" title="Luxury 1" alt="Luxury 1">
