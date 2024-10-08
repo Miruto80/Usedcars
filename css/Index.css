@@ -1,3 +1,4 @@
+
 html {
     scroll-behavior: smooth;
 }
@@ -5,9 +6,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: black;
+}
+.ad-banner {
+    width: 100%;
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina paddings */
 }
 
+.ad-banner img {
+    width: 100%;  /* Asegura que la imagen cubra todo el ancho */
+    height: auto; /* Mantiene la proporción del SVG */
+    display: block; /* Evita el espacio debajo de la imagen */
+}
 /* Estilo del header */
 header {
     display: flex;
@@ -16,6 +27,8 @@ header {
     padding: 10px 20px;
     background-color: #000; /* Color del header */
 }
+
+
 
 header .logo-container {
     display: flex;
