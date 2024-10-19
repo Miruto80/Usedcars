@@ -112,6 +112,32 @@ header nav ul li a {
         background-color: #000; /* Fondo del enlace */
         color: white; /* Color del texto */
     }
+
+    .redes-sociales {
+        flex-direction: column;
+    }
+
+    .redes-sociales a {
+        margin: 5px 0;
+    }
+
+    .legal {
+        margin-top: 10px;
+    }
+
+    #legal-button {
+        font-size: 14px;
+    }
+
+    #legal-content {
+        font-size: 12px;
+    }
+
+    @media (max-width: 768px) {
+    .experience-item {
+        flex: 1 1 calc(100% - 20px); /* Un elemento por fila en pantallas pequeñas */
+    }
+}
 }
 
 /* Sección Hero */
@@ -121,7 +147,11 @@ header nav ul li a {
     text-align: center;
     padding: 100px 20px;
 }
-
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;/* Espacio entre los botones */
+}
 .hero button {
     background-color: #000;
     color: #fff;
@@ -132,8 +162,6 @@ header nav ul li a {
     border-radius: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease, transform 0.3s ease;
-    display: block;
-    margin: auto;
 }
 
 .hero button:hover {
@@ -199,6 +227,118 @@ header nav ul li a {
     font-size: 16px;
 }
 
+/* Carousel Section */
+.car-carousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.carousel-title {
+    position: absolute;
+    top: 2px; /* Ajusta esta distancia según prefieras */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    color: white;
+    z-index: 2;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para que se lea mejor sobre la imagen */
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-arrow {
+    position: absolute;
+    left: 10px;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 10px;
+}
+
+.car-carousel h2 {
+    text-align: center;
+    font-size: 32px;
+    color: white; /* Puedes cambiar el color según el diseño */
+    margin-bottom: 20px;
+}
+
+.customer-experience {
+    background: linear-gradient(to bottom, #4a0f5c, #8055ca, #ae76c8);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.customer-experience h2 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff; /* Color del título */
+}
+
+.experience-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a varias líneas */
+    justify-content: center; /* Centra el contenido */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.experience-item {
+    background-color: white;
+    width: 600px; /* Dos elementos por fila, con margen */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que la imagen no sobresalga */
+}
+
+.experience-item img {
+    margin-top: 5px;
+    width: auto; /* Asegura que la imagen ocupe todo el ancho */
+    height: 300px; /* Mantiene la proporción de la imagen */
+}
+
+.experience-item p {
+    font-size: 16px;
+    color: #333; /* Color del texto */
+    padding: 10px; /* Espaciado interior */
+    margin: 0; /* Elimina márgenes */
+}
+
+
 /* Estilo del footer */
 footer {
     background: black;
@@ -221,6 +361,9 @@ footer {
     text-decoration: none;
     display: inline-block;
     transition: color 0.3s ease, transform 0.3s ease;
+}
+.redes-sociales i {
+padding: 5px;
 }
 
 .redes-sociales a:hover {

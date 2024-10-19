@@ -27,6 +27,8 @@
                 <li><a href="#"><b>Home</b></a></li>
                 <li><a href="Inventario de carros.html"><b>Inventory</b></a></li>
                 <li><a href="#contact"><b>Contact Us</b></a></li>
+                <li><a href="#contact"><b>Get approved</b></a></li>
+                <li><a href="#contact"><b>Sell your car</b></a></li>
             </ul>
         </nav>
     </header>
@@ -34,7 +36,10 @@
     <!-- Main Section -->
     <section class="hero">
         <h2>Find Your Next Car at Usedcars</h2>
-        <button onclick="location.href='Inventario de carros.html'">View Inventory</button>
+        <div class="hero-buttons">
+            <button onclick="location.href='Inventario de carros.html'">View Inventory</button>
+            <button onclick="location.href='Inventario de carros.html'">Get approved</button>
+        </div>
     </section>
 
     <!-- Information Section -->
@@ -56,11 +61,49 @@
             </div>
         </div>
     </section>
+     
+    <section class="car-carousel">
+        <div class="carousel-container">
+            <h2 class="carousel-title">Latest additions</h2>
+            <button class="carousel-arrow left-arrow" onclick="previousImage()">&#8249;</button>
+            <div class="carousel-image">
+                <img id="carousel-bg" src="img last/last add (1).jpeg" alt="Car 1">
+            </div>
+            <button class="carousel-arrow right-arrow" onclick="nextImage()">&#8250;</button>
+        </div>
+    </section>
+     
+    <!-- Customer Experience Section -->
+<section class="customer-experience">
+    <h2>Customer Experiences</h2>
+    <div class="experience-gallery">
+        <div class="experience-item">
+            <img src="imagenes/Testimonios (1).jpeg" alt="Customer Car 1">
+            <p>I had a great experience buying my car here! The process was smooth, and the staff was super helpful from start to finish. I love my new ride!"</p>
+        </div>
+        <div class="experience-item">
+            <img src="imagenes/Testimonios (2).jpeg" alt="Customer Car 2">
+            <p>"Buying a car was quick and easy! They answered all my questions and helped me find the perfect vehicle within my budget. Highly recommend!"
+            </p>
+        </div>
+        <div class="experience-item">
+            <img src="imagenes/Testimonios (3).jpeg" alt="Customer Car 3">
+            <p>"The team made buying my car so simple. I felt supported the whole time and drove off the lot feeling confident with my choice. Great service!"</p>
+        </div>
+        <div class="experience-item">
+            <img src="imagenes/Testimonios (4).jpeg" alt="Customer Car 4">
+            <p>"Amazing customer service! They listened to what I wanted, and I ended up with the perfect car. I couldn’t be happier with the entire process."</p>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
         <h4>Social Media</h4>
         <div class="redes-sociales" id="contact">
+            <i><i class="fa-solid fa-phone"></i> 469-275-6620 </i>
+            <i>usedcarsforsaletx@gmail.com <i class="fa-solid fa-envelope"></i></i>
+
             <a target="_blank" href="https://www.instagram.com/usedcarsforsaletx?igsh=MWZ6c3IyOW5zODBkdA%3D%3D&utm_source=qr">
                 <i class="fa-brands fa-instagram"></i>
             </a>
@@ -79,12 +122,6 @@
             </div>
         </div>
     </footer>
-       <script>
-    document.getElementById('legal-button').addEventListener('click', function () {
-        const legalContent = document.getElementById('legal-content');
-        legalContent.classList.toggle('show');
-    });
-
-       </script>
+       <script src="js/index.js"></script>
 </body>
 </html>
