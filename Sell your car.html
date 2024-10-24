@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagenes/Favi.png" type="image/x-icon">
+    <title>Document</title>
+</head>
+<style>
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000; /* Color del header */
+}
+
+
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container img {
+    height: 200px; /* Tamaño del logo */
+    margin-right: 10px;
+}
+
+header .logo-container h1 {
+    color: white;
+}
+
+header nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo-container {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra la imagen y el título horizontalmente */
+    }
+
+    header .logo-container img {
+        margin-right: 0; /* Elimina el margen derecho */
+        padding: 0;
+    }
+
+    header h1 {
+        text-align: center; /* Centra el texto del título */
+    }
+
+    header nav {
+        width: 100%;
+        text-align: left;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    header nav ul li a {
+        width: 100%;
+        padding: 10px 0;
+        display: block;
+        text-align: center;
+        background-color: #000; /* Fondo del enlace */
+        color: white; /* Color del texto */
+    }
+}
+</style>
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="imagen" src="imagenes/logo de carro sin fondo.png" alt="UsedCars logo" title="Usedcars - Texas Car Dealership">
+            <h1>Usedcars Car Sales in Texas</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><b>Home</b></a></li>
+                <li><a href="Inventario de carros.html"><b>Inventory</b></a></li>
+                <li><a href="#contact"><b>Contact Us</b></a></li>
+                <li><a href="Get approved.html"><b>Get approved</b></a></li>
+                <li><a href="Sell your car.html"><b>Sell your car</b></a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
