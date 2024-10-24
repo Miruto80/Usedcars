@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usedcars - Get approved</title>
     <link rel="shortcut icon" href="imagenes/Favi.png" type="image/x-icon">
+    <script src="js/jquery.min.js"></script>
 </head>
 <style>
 html {
@@ -170,11 +171,19 @@ option{
     background-color: #000;
     color: white;
 }
+
+.errorform {
+    color: red;
+    font-size: 0.9em;
+}
+
 </style>
 <body>
     <header>
         <div class="logo-container">
-            <img class="imagen" src="imagenes/logo de carro sin fondo.png" alt="UsedCars logo" title="Usedcars - Texas Car Dealership">
+            <a href="index.html">
+                <img class="imagen" src="imagenes/logo de carro sin fondo.png" alt="logo" title="Usedcars logo">
+                </a>
             <h1>Usedcars Car Sales in Texas</h1>
         </div>
         <nav>
@@ -183,12 +192,12 @@ option{
                 <li><a href="Inventario de carros.html"><b>Inventory</b></a></li>
                 <li><a href="#contact"><b>Contact Us</b></a></li>
                 <li><a href="Get approved.html"><b>Get approved</b></a></li>
-                <li><a href="Sell your car.html"><b>Sell your car</b></a></li>
+                <li><a href="Sell your car.html"><b>Trade-in</b></a></li>
             </ul>
         </nav>
     </header>
 
-    <form action="" method="POST">
+    <form action="https://formspree.io/f/mqakawov" method="POST" onsubmit="return validarenvio()">
         <label for="financing">Are you looking for in-house financing?</label>
         <select id="financing" name="financing">
             <option value="yes">Yes</option>
@@ -197,6 +206,7 @@ option{
 
         <label for="carType">What type of car are you looking for?</label>
         <input type="text" id="carType" name="carType" placeholder="Type of car" required>
+        <span id="scarType" class="errorform"></span>
 
         <label for="inTexas">Are you in Texas?</label>
         <select id="inTexas" name="inTexas">
@@ -204,12 +214,13 @@ option{
             <option value="no">No</option>
         </select>
 
-        <label for="contactMethod">Preferred contact method</label>
-        <select id="contactMethod" name="contactMethod">
-            <option value="text">Text</option>
-            <option value="email">Email</option>
-            <option value="call">Call</option>
-        </select>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Your name" required>
+        <span id="sname" class="errorform"></span>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" name="phone" id="phone" placeholder="Your phone number" required>
+        <span id="sphone" class="errorform"></span>
 
         <label for="tradeIn">Do you have a Trade-in?</label>
         <select id="tradeIn" name="tradeIn">
@@ -223,11 +234,57 @@ option{
             <option value="no">No</option>
         </select>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Send">
     </form>
 
 <script>
+$("#phone").on("keypress", function (e) {
+    validarkeypress(/^[0-9-\b]*$/, e);
+});
 
+$("#phone").on("keyup", function () {
+    validarkeyup(/^[0-9]{10,11}$/, $(this), $("#sphone"), "The format must be between 10 to 11 digits");
+});
+
+$("#name").on("keypress", function (e) {
+    validarkeypress(/^[A-Za-z\b\s\u00f1\u00d1\u00E0-\u00FC]*$/, e);
+});
+
+$("#name").on("keyup", function () {
+    validarkeyup(/^[A-Za-z\b\s\u00f1\u00d1\u00E0-\u00FC]{3,30}$/, $(this), $("#sname"), "Only letters between 3 and 30 characters");
+});
+
+// Función de validación del envío
+function validarenvio() {
+    if (validarkeyup(/^[0-9]{10,11}$/, $("#phone"), $("#sphone"), "The format must be between 10 to 11 digits") == 0) {
+        return false;
+    }
+    
+    if (validarkeyup(/^[A-Za-z\b\s\u00f1\u00d1\u00E0-\u00FC]{3,30}$/, $("#name"), $("#sname"), "Only letters between 3 and 30 characters") == 0) {
+        return false;
+    }
+    return true;
+}
+function validarkeypress(er, e) {
+    key = e.keyCode;
+    tecla = String.fromCharCode(key);
+    a = er.test(tecla);
+    if (!a) {
+        e.preventDefault();
+    }
+}
+
+// Función para validar la entrada después de escribir
+function validarkeyup(er, etiqueta, etiquetamensaje, mensaje) {
+    a = er.test(etiqueta.val());
+    if (a) {
+        etiquetamensaje.text("");
+        return 1;
+    } else {
+        etiquetamensaje.text(mensaje);
+        return 0;
+    }
+}
 </script>
 </body>
 </html>
