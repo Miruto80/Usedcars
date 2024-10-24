@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usedcars - Trade-in</title>
     <link rel="shortcut icon" href="imagenes/Favi.png" type="image/x-icon">
-    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
 </head>
 <style>
 html {
@@ -15,17 +16,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background: linear-gradient(to bottom, #4a0f5c, #8055ca, #ae76c8); /* Gradiente de fondo */
 }
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #000; /* Color del header */
+    background-color: #000;
 }
-
-
 
 header .logo-container {
     display: flex;
@@ -33,7 +32,7 @@ header .logo-container {
 }
 
 header .logo-container img {
-    height: 200px; /* Tamaño del logo */
+    height: 200px;
     margin-right: 10px;
 }
 
@@ -59,7 +58,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white; /* Color de los enlaces */
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
@@ -71,17 +70,17 @@ header nav ul li a {
     }
 
     header .logo-container {
-        flex-direction: column; /* Cambia la dirección a columna */
-        align-items: center; /* Centra la imagen y el título horizontalmente */
+        flex-direction: column;
+        align-items: center;
     }
 
     header .logo-container img {
-        margin-right: 0; /* Elimina el margen derecho */
+        margin-right: 0;
         padding: 0;
     }
 
     header h1 {
-        text-align: center; /* Centra el texto del título */
+        text-align: center;
     }
 
     header nav {
@@ -106,17 +105,86 @@ header nav ul li a {
         padding: 10px 0;
         display: block;
         text-align: center;
-        background-color: #000; /* Fondo del enlace */
-        color: white; /* Color del texto */
+        background-color: #000;
+        color: white;
     }
 }
+form {
+    background-color: #000;
+    padding: 40px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    color: white;
+}
+form label {
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin-top: 20px;
+}
+form input[type="text"]{
+    width: 97%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+form input[type="text"]::placeholder {
+    color: #ddd;
+}
+form input[type="submit"] {
+    background-color: #8055CA;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    margin: 30px auto 0;
+    width: 50%;
+    text-align: center;
+}
+
+form input[type="submit"]:hover {
+    background-color: #6f45bd;
+}
+option{
+    background-color: #000;
+    color: white;
+}
+
+.errorform {
+    color: red;
+    font-size: 0.9em;
+}
+
 </style>
 <body>
     <header>
         <div class="logo-container">
             <a href="index.html">
                 <img class="imagen" src="imagenes/logo de carro sin fondo.png" alt="logo" title="Usedcars logo">
-             </a>
+                </a>
             <h1>Usedcars Car Sales in Texas</h1>
         </div>
         <nav>
@@ -129,5 +197,100 @@ header nav ul li a {
             </ul>
         </nav>
     </header>
+
+    <form action="https://formspree.io/f/mzzbzynn" method="POST" onsubmit="return validarenvio()">
+        <label for="year">Year</label>
+        <input type="date" name="year" id="year" placeholder="Car Year" required>
+        <span id="syear" class="errorform"></span>
+
+        <label for="make">Make</label>
+        <input type="text" name="make" id="make" placeholder="Car Make" required>
+        <span id="smake" class="errorform"></span>
+
+        <label for="model">Model</label>
+        <input type="text" name="model" id="model" placeholder="Car Model" required>
+        <span id="smodel" class="errorform"></span>
+
+        <label for="miles">Miles</label>
+        <input type="text" name="miles" id="miles" placeholder="Miles" required>
+        <span id="smiles" class="errorform"></span>
+        
+        <label for="title">Do you have the title?</label>
+        <select id="title" name="title">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Your name" required>
+        <span id="sname" class="errorform"></span>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" name="phone" id="phone" placeholder="Your phone number" required>
+        <span id="sphone" class="errorform"></span>
+
+        <input type="submit" value="Send">
+    </form>
+
+<script>
+$("#phone").on("keypress", function (e) {
+    validarkeypress(/^[0-9-\b]*$/, e);
+});
+
+$("#phone").on("keyup", function () {
+    validarkeyup(/^[0-9]{10,11}$/, $(this), $("#sphone"), "The format must be between 10 to 11 digits");
+});
+
+$("#miles").on("keypress", function (e) {
+    validarkeypress(/^[0-9-\b]*$/, e);
+});
+
+$("#miles").on("keyup", function () {
+    validarkeyup(/^[0-9]{1,10}$/, $(this), $("#smiles"), "Only numbers allowed for miles");
+});
+
+$("#name").on("keypress", function (e) {
+    validarkeypress(/^[A-Za-z\b\s\u00f1\u00d1\u00E0-\u00FC]*$/, e);
+});
+
+$("#name").on("keyup", function () {
+    validarkeyup(/^[A-Za-z\b\s\u00f1\u00d1\u00E0-\u00FC]{3,30}$/, $(this), $("#sname"), "Only letters between 3 and 30 characters");
+});
+
+// Función de validación del envío
+function validarenvio() {
+    if (validarkeyup(/^[0-9]{10,11}$/, $("#phone"), $("#sphone"), "The format must be between 10 to 11 digits") == 0) {
+        return false;
+    }
+    
+    if (validarkeyup(/^[A-Za-z\b\s\u00f1\u00d1\u00E0-\u00FC]{3,30}$/, $("#name"), $("#sname"), "Only letters between 3 and 30 characters") == 0) {
+        return false;
+    }
+    if (validarkeyup(/^[0-9]{1,10}$/, $("#phone"), $("#sphone"), "Only numbers allowed for miles") == 0) {
+        return false;
+    }
+    return true;
+}
+function validarkeypress(er, e) {
+    key = e.keyCode;
+    tecla = String.fromCharCode(key);
+    a = er.test(tecla);
+    if (!a) {
+        e.preventDefault();
+    }
+}
+
+// Función para validar la entrada después de escribir
+function validarkeyup(er, etiqueta, etiquetamensaje, mensaje) {
+    a = er.test(etiqueta.val());
+    if (a) {
+        etiquetamensaje.text("");
+        return 1;
+    } else {
+        etiquetamensaje.text(mensaje);
+        return 0;
+    }
+}
+</script>
 </body>
 </html>
