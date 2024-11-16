@@ -36,7 +36,7 @@ header .logo-container {
 }
 
 header .logo-container img {
-    height: 200px; /* Tamaño del logo */
+    height: 250px; /* Tamaño del logo */
     margin-right: 10px;
 }
 
