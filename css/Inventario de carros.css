@@ -55,6 +55,11 @@ header nav ul li a {
     font-weight: bold;
 }
 
+p {
+    margin:  0.2em 0;
+    font-weight: bold;
+}
+
 
 @media (max-width: 768px) {
     header {
@@ -156,6 +161,7 @@ header nav ul li a {
   }
   .car h3 {
    margin: 0;
+   font-size: 1.2em;
   }
 
   .car-info {
