@@ -142,7 +142,10 @@ header nav ul li a {
 
 /* Sección Hero */
 .hero {
-    background: linear-gradient(to bottom, #4a0f5c, #8055ca, #ae76c8); /* Gradiente de fondo */
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #0782fa, #00008f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #0782fa, #00008f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     /* Gradiente de fondo */
     color: #fff;
     text-align: center;
     padding: 100px 20px;
@@ -218,7 +221,7 @@ header nav ul li a {
 }
 
 .info-section .feature h3 {
-    color: #8055CA;
+    color: #0782fa;
     margin-bottom: 10px;
 }
 
@@ -298,7 +301,8 @@ header nav ul li a {
 }
 
 .customer-experience {
-    background: linear-gradient(to bottom, #4a0f5c, #8055ca, #ae76c8);
+    background: -webkit-linear-gradient(to top, #0782fa, #00008f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #0782fa, #00008f);
     padding: 40px 20px;
     text-align: center;
 }

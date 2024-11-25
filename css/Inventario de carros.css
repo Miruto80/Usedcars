@@ -183,7 +183,7 @@ p {
     font-size: 24px; /* Tamaño de la flecha */
     cursor: pointer;
     margin: 0 5px; /* Espaciado entre flechas */
-    color: #8055CA; /* Color de las flechas */
+    color: #0782fa; /* Color de las flechas */
 }
 
 .car-controls .arrow:hover {
@@ -229,7 +229,7 @@ p {
   }
 
   .form-container .btn {
-      background-color: #8055CA;
+      background-color: #0782fa;
       color: #fff;
       border: none;
       padding: 10px;
