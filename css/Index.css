@@ -189,6 +189,7 @@ header nav ul li a:hover {
 }
 
 .info-section h2 {
+    margin-top: 0;
     font-size: 36px;
     margin-bottom: 20px;
     color: white;
