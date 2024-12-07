@@ -1,9 +1,9 @@
 let currentImageIndex = 0;
 const images = [
-    "img last/last add (1).jpeg", 
-    "img last/2019 Toyota tundra  (4).jpeg", 
-    "img last/2021 GMC Yukon  (4).jpeg", 
-    "img last/last add (4).jpeg"
+    "img last/Last (1).jpeg", 
+    "img last/Last (2).jpeg", 
+    "img last/Last (3).jpeg", 
+    "img last/Last (4).jpeg"
 ];
 const carouselBg = document.getElementById("carousel-bg");
 
