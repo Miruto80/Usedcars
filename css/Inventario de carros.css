@@ -28,7 +28,7 @@ header .logo-container {
 }
 
 header .logo-container img {
-    height:250px; /* Tamaño del logo */
+    height: 240px; /* Tamaño del logo */
     margin-right: 10px;
 }
 
@@ -79,9 +79,11 @@ p {
     header .logo-container img {
         margin-right: 0; /* Elimina el margen derecho */
         padding: 0;
+        margin-bottom: 0;
     }
 
     header h1 {
+        margin-top: 0;
         text-align: center; /* Centra el texto del título */
     }
 
