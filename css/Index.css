@@ -16,7 +16,7 @@ body {
 
 .ad-banner img {
     width: 100%;  /* Asegura que la imagen cubra todo el ancho */
-    height: 80px; /* Mantiene la proporción del SVG */
+    height: 100px; /* Mantiene la proporción del SVG */
     display: block; /* Evita el espacio debajo de la imagen */
 }
 /* Estilo del header */
