@@ -36,12 +36,13 @@ header .logo-container {
 }
 
 header .logo-container img {
-    height: 240px; /* Tamaño del logo */
+    height: 210px; /* Tamaño del logo */
     margin-right: 10px;
 }
 
 header .logo-container h1 {
     color: white;
+    font-size: 25px;
 }
 
 header nav {

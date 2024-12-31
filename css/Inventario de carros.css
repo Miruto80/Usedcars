@@ -26,9 +26,11 @@ header .logo-container {
     display: flex;
     align-items: center;
 }
-
+header h1{
+    font-size: 25px;
+}
 header .logo-container img {
-    height: 240px; /* Tamaño del logo */
+    height: 200px; /* Tamaño del logo */
     margin-right: 10px;
 }
 

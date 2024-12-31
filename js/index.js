@@ -3,7 +3,8 @@ const images = [
     "img last/Last (1).jpeg", 
     "img last/Last (2).jpeg", 
     "img last/Last (3).jpeg", 
-    "img last/Last (4).jpeg"
+    "img last/Last (4).jpeg",
+    "img last/Last (5).jpeg"
 ];
 const carouselBg = document.getElementById("carousel-bg");
 
