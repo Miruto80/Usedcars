@@ -144,6 +144,9 @@ header nav ul li a:hover {
     #legal-content {
         font-size: 12px;
     }
+    .carousel-title{
+        width: 100%;
+    }
 
     @media (max-width: 768px) {
     .experience-item {
