@@ -8,16 +8,43 @@ body {
     padding: 0;
     background-color: black;
 }
-.ad-banner {
-    width: 100%;
-    margin: 0; /* Elimina márgenes */
-    padding: 0; /* Elimina paddings */
+.top-bar {  
+    background: #044CCE;
+    color: #fff; /* White text for readability */
+    padding: 5px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
 }
 
-.ad-banner img {
-    width: 100%;  /* Asegura que la imagen cubra todo el ancho */
-    height: 100px; /* Mantiene la proporción del SVG */
-    display: block; /* Evita el espacio debajo de la imagen */
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-info a {
+    color: white; /* Highlight color for the phone number */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-links a {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition:color 0.3s ease, transform 0.3s ease;
+}
+
+
+.social-links a:hover {
+    color: #5A9; 
+    transform: scale(1.2);
 }
 /* Estilo del header */
 header {
