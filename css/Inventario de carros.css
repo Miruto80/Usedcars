@@ -12,43 +12,13 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
       color: #fff;
   }
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
     background-color: #000; /* Color del header */
-    position: sticky;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-   
 }
 
-header .logo-container {
-    display: flex;
-    align-items: center;
-}
-header h1{
-    font-size: 25px;
-}
-header .logo-container img {
-    height: 200px; /* Tamaño del logo */
-    margin-right: 10px;
-}
-
-header nav {
-    flex-grow: 1;
-    text-align: right;
-}
-
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-}
-
-header nav ul li {
-    margin-left: 20px;
+header h1 {
+    color: white; /* Color del texto del h1 */
+    font-size: 1.5rem; /* Tamaño del h1 para que no sea demasiado grande */
+    font-weight: bold;
 }
 
 header nav ul li a {
@@ -56,65 +26,46 @@ header nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.5s ease;
+    font-size: 19px;
+    margin-left: 5px;
 }
 header nav ul li a:hover {
     color: #0782fa; /* Color de los enlaces */
 }
 
+#Link-I{
+    background-color: #0782fa;
+    border-radius: 15px;
+    padding: 12px;
+    color: white;
+    transition: background-color 0.5s ease;
+    text-align: center;
+}
+
+#Link-I:hover{
+    background-color: white;
+    color:black;
+}
+
+.navbar-toggler i {
+    font-size: 1.5rem;
+}
+.navbar-toggler {
+    border: 2px solid white !important; /* Borde blanco */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    padding: 6px 10px; /* Espaciado interno para que el icono no quede pegado al borde */
+    background: transparent; /* Fondo transparente */
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    background: rgba(255, 255, 255, 0.1); /* Fondo sutil al hacer hover */
+    transform: scale(1.05); /* Pequeño efecto de agrandamiento */
+}
+
 p {
     margin:  0.2em 0;
     font-weight: bold;
-}
-
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header .logo-container {
-        flex-direction: column; /* Cambia la dirección a columna */
-        align-items: center; /* Centra la imagen y el título horizontalmente */
-    }
-
-    header .logo-container img {
-        margin-right: 0; /* Elimina el margen derecho */
-        padding: 0;
-        margin-bottom: 0;
-    }
-
-    header h1 {
-        margin-top: 0;
-        text-align: center; /* Centra el texto del título */
-    }
-
-    
-    header nav {
-        width: 100%;
-        text-align: left;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    header nav ul li {
-        margin-left: 0;
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    header nav ul li a {
-        width: 100%;
-        padding: 10px 0;
-        display: block;
-        text-align: center;
-        background-color: #000; /* Fondo del enlace */
-        color: white; /* Color del texto */
-    }
 }
   .caja_img {
       display: flex;
@@ -273,9 +224,10 @@ p {
   }
 
   hr {
-      color: #000;
-      margin: 30px 0;
-  }
+    border: 1px solid white; /* Borde blanco */
+    margin: 30px 0;
+}
+
 
   .title-select-container {
     display: flex;
@@ -320,6 +272,7 @@ p {
     font-size: 14px; /* Tamaño de la fuente reducido */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
     transition: all 0.3s ease; /* Transición suave para el hover */
+    margin-bottom: 5px;
 }
 
 #location-select:hover {

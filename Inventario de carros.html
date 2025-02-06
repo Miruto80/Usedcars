@@ -5,26 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore our extensive inventory of used cars at UsedCars. From sports cars to sedans, we have the perfect vehicle for you. Filter by location and discover exclusive deals on high-quality vehicles.">
    <title>Usedcars - Car Inventory</title>
-   <link rel="stylesheet" href="css/Inventario de carros.css">
    <link rel="shortcut icon" href="imagenes/Favi.png" type="image/x-icon">
-   <script src="js/jquery.min.js"></script>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+   <link rel="stylesheet" href="css/Inventario de carros.css">
+   <script src="https://kit.fontawesome.com/a994ffc8cf.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-        <a href="index.html">
-            <img class="imagen" src="imagenes/Logo_nuevo-removebg-preview.png" alt="UsedCars logo" title="Usedcars - Texas Car Dealership">
-        </a>
-        <h1>Used Cars for Cash or Financing</h1>
-    </div>
-    <nav id="nav">
-        <ul>
-            <li><a href="index.html"><b>Home</b></a></li>
-            <li><a href="Get approved.html"><b>Get approved</b></a></li>
-            <li><a href="Sell your car.html"><b>Trade-in</b></a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="imagenes/Logo_nuevo-removebg-preview.png" alt="Logo Taekyon" width="auto" height="200" class="d-inline-block align-text-top">
+            </a>
+            <h1 class="navbar-brand fs-4 d-none d-sm-inline d-lg-inline fs-lg-2 text-white">
+              <b>Used Cars for Cash or Financing</b>
+            </h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars text-white"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Get approved.html">Get approved</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Sell your car.html">Trade-in</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
 <div class="title-select-container">
     <h1>Car Inventory</h1>
     <select id="location-select" onchange="filterByLocation()">

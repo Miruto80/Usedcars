@@ -6,8 +6,11 @@
     <meta name="description" content="Discover the best used cars at UsedCars. We offer an exclusive selection of high-quality vehicles with competitive prices and exceptional service in Texas.">
     <meta name="keywords" content="Used Cars in Texas, Pre-Owned Vehicles, Affordable Used Cars, Texas Car Dealership, Buy Used Cars, Best Used Car Deals, Certified Pre-Owned Cars, Used Trucks, Car Financing, Low Mileage Used Cars, Texas Auto Sales, Pre-Owned SUVs, Reliable Used Cars">
     <title>Used Cars for Sale in Texas | Usedcars</title>
-    <link rel="stylesheet" href="css/Index.css">
     <link rel="shortcut icon" href="imagenes/Favi.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="css/Index.css">
     <script src="https://kit.fontawesome.com/a994ffc8cf.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -22,20 +25,39 @@
         </div>
     </div>
       <!-- Header-->
-    <header>
-        <div class="logo-container">
-            <img class="imagen" src="imagenes/Logo_nuevo-removebg-preview.png" alt="UsedCars logo" title="Usedcars - Texas Car Dealership">
-            <h1>Used Cars for Cash or Financing</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="Inventario de carros.html">Inventory</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="Get approved.html">Get approved</a></li>
-                <li><a href="Sell your car.html">Trade-in</a></li>
-            </ul>
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="imagenes/Logo_nuevo-removebg-preview.png" alt="Logo Taekyon" width="auto" height="200" class="d-inline-block align-text-top">
+            </a>
+            <h1 class="navbar-brand fs-4 d-none d-sm-inline d-lg-inline fs-lg-2 text-white">
+              <b>Used Cars for Cash or Financing</b>
+            </h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars text-white"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Get approved.html">Get approved</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Sell your car.html">Trade-in</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="Link-I" href="Inventario de carros.html">View inventory</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
-    </header>
+      </header>
+      
 
     <!-- Main Section -->
     <section class="hero">
