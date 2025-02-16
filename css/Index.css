@@ -293,48 +293,6 @@ header nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.customer-experience {
-    background: -webkit-linear-gradient(to top, #0782fa, #00008f);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #0782fa, #00008f);
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.customer-experience h2 {
-    font-size: 36px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #fff; /* Color del título */
-}
-
-.experience-gallery {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten a varias líneas */
-    justify-content: center; /* Centra el contenido */
-    gap: 20px; /* Espacio entre los elementos */
-}
-
-.experience-item {
-    background-color: white;
-    width: 450px; /* Dos elementos por fila, con margen */
-    margin-left: 60px;
-    margin-right: 60px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px; /* Bordes redondeados */
-}
-
-.experience-item img {
-    margin-top: 5px;
-    width: auto; /* Asegura que la imagen ocupe todo el ancho */
-    height: 300px; /* Mantiene la proporción de la imagen */
-}
-
-.experience-item p {
-    font-size: 16px;
-    color: #333; /* Color del texto */
-    padding: 10px; /* Espaciado interior */
-    margin: 0; /* Elimina márgenes */
-}
 
 /* Title Styling */
 .section-title {

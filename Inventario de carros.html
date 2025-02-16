@@ -4113,6 +4113,24 @@
 
      <!-- More cash cars here -->   
     </div>
+
+    <div id="financingModal" class="modal">
+        <div class="modal-content">
+            <h2>Total Price & Financing Information</h2>
+            <p>
+                The “down payment” listed is only a portion of the total vehicle cost. The final price of the vehicle will be higher and is subject to financing through our partnered dealers. Financing terms, including the interest rate, loan duration, and any additional fees, will be provided directly by the dealer and must be reviewed and agreed upon before completing the purchase. The down payment amount and financing terms may vary based on your credit history and other factors.
+            </p>
+            <p>
+                For more details on pricing and financing options, please contact us or consult directly with our partnered dealers.
+            </p>
+            <div class="modal-actions">
+                <input type="checkbox" id="agreeCheck">
+                <label for="agreeCheck">I agree to the terms</label>
+                <button id="agreeBtn" onclick="closeModalFunc()" disabled>Proceed</button>
+                <button onclick="location.href='Index.html'">Cancel</button>
+            </div>
+        </div>
+    </div>
     <div id="contactForm" class="form-popup" >
         <form class="form-container" action="https://formspree.io/f/myzgbjdv" method="POST" onsubmit="return validarenvio()">
             <h2>Request Information</h2>
