@@ -173,6 +173,7 @@ p {
   .car h3 {
    margin: 0;
    font-size: 1.2em;
+   font-weight: bold;
   }
 
   .car-info {
