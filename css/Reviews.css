@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #00008f !important;
+}
+header {
+    background-color: #000; /* Color del header */
+}
+
+header h1 {
+    color: white; /* Color del texto del h1 */
+    font-size: 1.5rem; /* Tamaño del h1 para que no sea demasiado grande */
+    font-weight: bold;
+}
+
+header nav ul li a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.5s ease;
+    font-size: 19px;
+    margin-left: 5px;
+}
+header nav ul li a:hover {
+    color: #0782fa; /* Color de los enlaces */
+}
+
+#Link-I{
+    background-color: #0782fa;
+    border-radius: 15px;
+    padding: 12px;
+    color: white;
+    transition: background-color 0.5s ease;
+    text-align: center;
+}
+
+#Link-I:hover{
+    background-color: white;
+    color:black;
+}
+
+.navbar-toggler i {
+    font-size: 1.5rem;
+}
+.navbar-toggler {
+    border: 2px solid white !important; /* Borde blanco */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    padding: 6px 10px; /* Espaciado interno para que el icono no quede pegado al borde */
+    background: transparent; /* Fondo transparente */
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    background: rgba(255, 255, 255, 0.1); /* Fondo sutil al hacer hover */
+    transform: scale(1.05); /* Pequeño efecto de agrandamiento */
+}
+
+#reviews {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#reviews h2 {
+    font-size: 35px;
+    color: #333;
+    margin-bottom: 25px;
+}
+#reviews button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+#reviews button:hover {
+    background-color: gray;
+}
+#reviewsList h3 {
+    color: white;
+    font-size: 30px;
+    margin:25px;
+}
+#reviewsList div {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+#reviewsList div strong {
+    font-size: 18px;
+    color: #333;
+}
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+#modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    color:black;
+  }
+#modal-content h3 {
+    margin-top: 0;
+}
+#close-modal {
+    background: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    float: right;
+}
+form label {
+font-weight: bold;
+color: #4A3C31;
+display: block;
+margin-top: 20px;
+}
+form input[type="text"]{
+width: 97%;
+padding: 10px;
+margin-top: 5px;
+margin-bottom: 15px;
+border: none;
+border-bottom: 2px solid black;
+background-color: transparent;
+color: #4A3C31;
+outline: none;
+}
+
+form input:focus,select:focus{
+border-bottom: 2px solid #0782fa;
+}
+form select {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+margin-bottom: 15px;
+border: none;
+border-bottom: 2px solid black;
+background-color: transparent;
+color: black;
+outline: none;
+}
+
+select option{
+background-color: white;
+color: black;
+}
+
+form input[type="text"]::placeholder {
+color: #4A3C31;
+}
+
+form button {
+background-color: #0782fa;
+color: white;
+padding: 15px 30px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 18px;
+display: block;
+margin: 30px auto 0;
+width: 50%;
+text-align: center;
+transition: background-color 0.3s ease;
+}
+
+form button:hover {
+background-color: cyan;
+}
+option{
+background-color: #000;
+color: white;
+}
+
+.errorform {
+color: red;
+font-size: 0.9em;
+}
+/* Estilos para el <textarea> */
+form textarea {
+width: 97%;
+padding: 10px;
+margin-top: 5px;
+margin-bottom: 15px;
+border: 2px solid black; /* Borde similar al de otros campos */
+background-color: transparent;
+color: #4A3C31;
+border-radius: 5px;
+outline: none;
+resize: vertical; /* Permite cambiar el tamaño verticalmente */
+transition: border-color 0.3s ease;
+}
+
+form textarea:focus {
+border-color: #0782fa ; /* Color de borde cuando se hace foco */
+box-shadow: 0 0 5px rgba(203, 220, 238, 0.5); /* Sombra suave en foco */
+}
+
+/* Estilo para el texto del <textarea> */
+form textarea::placeholder {
+color: #A1A1A1; /* Gris claro para el placeholder */
+font-style: italic; /* Hacer el texto del placeholder en cursiva */
+}
