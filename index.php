@@ -196,7 +196,7 @@
                 Legal <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div id="legal-content" class="hidden">
-                <p>&copy; Usedcars 2024</p>
+                <p>&copy; Usedcars 2025</p>
                 <p>All rights reserved. The images of the cars are used with permission.</p>
                 <p>UsedCarsInTexas.com operates exclusively as a car locator and intermediary between buyers and dealers in Texas and Florida. We do not sell vehicles directly. All pricing, financing terms, and warranties are determined and managed by the individual dealer.</p>
             </div>
