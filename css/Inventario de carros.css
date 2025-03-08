@@ -208,57 +208,87 @@ p {
     display: none;
 }
 
-  .form-popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border: 3px solid #000;
-      z-index: 9;
-      background-color: #fff;
-      padding: 20px;
-      color: #000;
-  }
+#contactForm {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 9999; /* Asegura que esté encima de otros elementos */
+    overflow: auto; /* Permite desplazarse si el contenido es muy largo */
+}
+.form-header{
+    display: flex;
+    justify-content: space-between;
+}
 
-  .form-container {
-      max-width: 400px;
-      text-align: center;
-  }
+/* Contenedor del formulario */
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    max-height: 90vh; /* Evita que el formulario sea más alto que la pantalla */
+    overflow-y: auto; /* Permite desplazarse dentro del formulario si es necesario */
+}
+.form-container h3{
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
 
-  .form-container h2 {
-      margin-bottom: 20px;
-      color: #000;
-  }
+/* Asegurarse de que los campos estén bien alineados */
+label, input, textarea {
+    width: 100%;
+    color:#000;
+    margin: 5px;
+}
 
-  .form-container input[type="text"],
-  .form-container input[type="tel"],
-  .form-container input[type="email"] {
-      width: 95%;
-      padding: 10px;
-      margin: 5px 0 10px 0;
-      border: 1px solid #ccc;
-  }
+input[type="text"], textarea, input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.close-icon{
+background-color: red;
+border: none;
+}
+.close-icon:hover{
+background-color: rgb(241, 126, 126);
+}
 
-  .form-container .btn {
-      background-color: #0782fa;
-      color: #fff;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      width: 100%;
-      margin-bottom: 10px;
-      opacity: 0.9;
-      
-  }
+input[type="submit"] {
+    background-color: #1F2023;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
 
-  .form-container .btn:hover {
-      background-color: #000;
-  }
+input[type="submit"]:hover {
+    background-color: #393C43;
+    color:white;
+}
 
-  .form-container .cancel {
-      background-color: #f44336;
-  }
+/* Ajustes específicos para móviles */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+        max-width: 90%;
+        width: 90%;
+        max-height: 80vh; /* Ajuste para pantallas más pequeñas */
+    }
+}
+
 
   h1, h2 {
       text-align: center;

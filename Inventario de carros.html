@@ -4467,26 +4467,28 @@
             </div>
         </div>
     </div>
-    <div id="contactForm" class="form-popup" >
-        <form class="form-container" action="https://formspree.io/f/myzgbjdv" method="POST" onsubmit="return validarenvio()">
-            <h2>Request Information</h2>
+    <div id="contactForm" class="form-popup">
+        <form class="form-container" action="https://formspree.io/f/xzzdgjwz" method="POST" onsubmit="return validarenvio()">
+            <div class="form-header">
+            <h3>Request Information</h3>
+            <button type="button" class="close-icon" onclick="closeForm()">✖</button>
+            </div>
             <label for="name">Name</label>
             <input type="text" name="name" id="name" placeholder="Your name" required>
             <span id="sname" class="errorform"></span>
-
+    
             <label for="phone">Phone Number</label>
-           <input type="text" id="phone" name="phone" placeholder="Your phone number">
-           <span id="sphone" class="errorform"></span>
-
-           <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email address">
-            <span id="semail" class="errorform"></span>
-
+            <input type="text" id="phone" name="phone" placeholder="Your phone number">
+            <span id="sphone" class="errorform"></span>
+         
+            <label for="email">Email</label>
+             <input type="email" id="email" name="email" placeholder="Your email address">
+             <span id="semail" class="errorform"></span>
+    
             <label for="car">Car of Interest</label>
             <input type="text" name="car" id="car" readonly>
-
+    
             <input type="submit" class="btn" value="Send">
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
     </div>
 
